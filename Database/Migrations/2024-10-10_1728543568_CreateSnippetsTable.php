@@ -9,11 +9,11 @@ class CreateSnippetsTable implements SchemaMigration
     {
         // マイグレーションロジックをここに追加してください
         return [
-            "CREATE TABLE snipetts (
+            "CREATE TABLE snippets (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 snippet TEXT NOT NULL,
                 url VARCHAR(255) NOT NULL,
-                programming_language VARCHAR(30) NOT NULL,
+                programing_language VARCHAR(30) NOT NULL,
                 sent_time DATETIME NOT NULL,
                 expiration_date DATETIME NOT NULL
             )"
@@ -24,7 +24,7 @@ class CreateSnippetsTable implements SchemaMigration
     {
         // ロールバックロジックを追加してください
         return [
-            "DROP TABLE snipetts"
+            "DROP TABLE snippets"
         ];
     }
 }
